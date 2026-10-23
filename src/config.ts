@@ -1,8 +1,10 @@
+import type { SharedDataValue } from './services/advancedExpressions.js'
 import { Regex, type SomeCompanionConfigField } from '@companion-module/base'
 
 export type ModuleConfig = {
 	host: string
 	port: number
+	sharedData?: Record<string, SharedDataValue>
 }
 
 export function GetConfigFields(): SomeCompanionConfigField[] {

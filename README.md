@@ -1,11 +1,22 @@
-# companion-module-[replace with module name]
+# Advanced Expressions for Bitfocus Companion
 
-See [HELP.md](./companion/HELP.md) and [LICENSE](./LICENSE)
+Advanced Expressions adds reusable logging, persistent shared JSON data, and a small request queue as Companion module actions and variables. It preserves the module template's sample action and config fields.
 
-## Getting started
+## Development
 
-Executing a `yarn` command should perform all necessary steps to develop the module, if it does not then follow the steps below.
+This repository uses Yarn 4 through Corepack:
 
-The module can be built once with `yarn build`. This should be enough to get the module to be loadable by companion.
+```powershell
+corepack yarn install
+corepack yarn build
+corepack yarn test
+corepack yarn lint
+```
 
-While developing the module, by using `yarn dev` the compiler will be run in watch mode to recompile the files on change.
+## What the module can and cannot do
+
+The supported module API provides module logging, action definitions, variables, and `saveConfig()`. It does not provide a way for a module to register new functions in Companion's expression editor or invoke another module's action by ID.
+
+Consequently, `print(...)`, `setSharedData(...)`, `getSharedData(...)`, `hasSharedData(...)`, and `actionSend(...)` are **not native expression functions** in this module. Use the corresponding module actions and read their result variables from Companion expressions. A native function implementation requires changes to Companion's expression engine and host integration; arbitrary action dispatch requires a new, permission-checked Companion core API.
+
+See [companion/HELP.md](./companion/HELP.md) for action usage and integration details.

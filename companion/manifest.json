@@ -1,28 +1,27 @@
 {
 	"$schema": "../node_modules/@companion-module/base/assets/manifest.schema.json",
 	"type": "connection",
-	"id": "your-module-name",
-	"name": "your-module-name",
-	"shortname": "module-shortname",
-	"description": "A short one line description of your module",
-	"version": "0.0.0",
+	"id": "advanced-expressions",
+	"name": "advanced-expressions",
+	"shortname": "Advanced Expr",
+	"description": "Reusable logging, shared data, and request processing for Companion",
+	"version": "0.1.0",
 	"license": "MIT",
-	"repository": "git+https://github.com/bitfocus/companion-module-your-module-name.git",
-	"bugs": "https://github.com/bitfocus/companion-module-your-module-name/issues",
+	"repository": "git+https://github.com/ABKTeck/Advanced-expression-system-for-companion.git",
+	"bugs": "https://github.com/ABKTeck/Advanced-expression-system-for-companion/issues",
 	"maintainers": [
 		{
-			"name": "Your name",
-			"email": "Your email"
+			"name": "ABKTeck"
 		}
 	],
 	"runtime": {
 		"type": "node26",
 		"api": "nodejs-ipc",
-		"apiVersion": "0.0.0",
+		"apiVersion": "1.0.0",
 		"entrypoint": "../dist/main.js"
 	},
 	"legacyIds": [],
-	"manufacturer": "Your company",
-	"products": ["Your product"],
+	"manufacturer": "ABKTeck",
+	"products": ["Advanced Expressions"],
 	"keywords": []
 }

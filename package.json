@@ -1,5 +1,5 @@
 {
-	"name": "your-module-name",
+	"name": "advanced-expressions",
 	"version": "0.1.0",
 	"main": "dist/main.js",
 	"type": "module",
@@ -10,13 +10,14 @@
 		"build": "rimraf dist && run build:main",
 		"build:main": "tsc -p tsconfig.build.json",
 		"dev": "tsc -p tsconfig.build.json --watch",
+		"test": "run build && node --test test/*.test.js",
 		"lint:raw": "eslint",
 		"lint": "run lint:raw ."
 	},
 	"license": "MIT",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/bitfocus/companion-module-your-module-name.git"
+		"url": "git+https://github.com/ABKTeck/Advanced-expression-system-for-companion.git"
 	},
 	"engines": {
 		"node": "^26",
@@ -42,7 +43,7 @@
 			"prettier --write"
 		],
 		"*.{ts,tsx,js,jsx}": [
-			"yarn lint:raw --fix"
+			"corepack yarn lint:raw --fix"
 		]
 	},
 	"packageManager": "yarn@4.18.1"
